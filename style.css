@@ -2,16 +2,15 @@
 
 body {
     display: flex;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionando transição suave */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Ubuntu', sans-serif; /* Adicionado para garantir a fonte padrão */
 }
 
 .h2 {
-    font-family: 'Ubuntu', sans-serif;
     text-align: center;
 }
 
 .sidebar {
-    font-family: 'Ubuntu', sans-serif;
     width: 250px;
     height: 100vh;
     position: fixed;
@@ -71,7 +70,15 @@ body {
     color: #222930;
     font-size: 1.5rem;
     position: relative;
-    border-style: double;
+    border-style: solid;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.links__redes__sociais:hover {
+    background-color: #d1e0e0;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo__imagem {
@@ -81,12 +88,6 @@ body {
 }
 
 /* Estilos do Modo Escuro */
-.dark__mode__text {
-    font-family: 'Ubuntu', sans-serif;
-    margin-left: 10px;
-    text-size-adjust: 15px;
-}
-
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
@@ -117,9 +118,15 @@ body.dark-mode .popup {
 }
 
 body.dark-mode .links__redes__sociais {
-    background-color: #333; /* Cor de fundo escura */
-    color: #ccc; /* Cor do texto clara */
-    border-color: #555; /* Cor da borda mais escura */
+    background-color: #333;
+    color: #ccc;
+    border-color: #555;
+}
+
+body.dark-mode .links__redes__sociais:hover {
+    background-color: #444;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Estilos do Botão de Alternância */
