@@ -26,8 +26,6 @@ function fecharPopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
-// ... seu código JavaScript anterior ...
-
 // Modo Escuro
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
