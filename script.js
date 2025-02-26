@@ -38,6 +38,18 @@ if (document.getElementById('agendamentoForm')) {
     }
 }
 
+// agendamentos.html scripts
+if (document.getElementById('agendamentoForm')) {
+    document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('popupAgendamento').style.display = 'block';
+    });
+
+    function fecharPopupAgendamento() {
+        document.getElementById('popupAgendamento').style.display = 'none';
+    }
+}
+
 // Modo Escuro
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;

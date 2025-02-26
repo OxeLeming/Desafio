@@ -13,7 +13,7 @@
         <a href="index.html">Dashboard</a>
         <a href="pacientes.html">Pacientes</a>
         <a href="agendamentos.html">Agendamentos</a>
-        <a href="#">Relatórios</a>
+        <a href="relatorios.html">Relatórios</a>
         <a href="configuracoes.html">Configurações</a>
     </div>
     <div class="content">
@@ -29,11 +29,12 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="medico" class="form-label">Médico</label>
+                <label for="medico" class.form-label">Médico</label>
                 <select class="form-select" id="medico" required>
                     <option value="">Selecione um médico</option>
                     <option value="1">Dr. Antônio</option>
                     <option value="2">Dra. Beatriz</option>
+                    <option value="3">Dr. Jhonatas</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -41,7 +42,7 @@
                 <input type="date" class="form-control" id="data" required>
             </div>
             <div class="mb-3">
-                <label for="hora" class="form-label">Hora</label>
+                <label for="hora" class.form-label">Hora</label>
                 <input type="time" class="form-control" id="hora" required>
             </div>
             <div class="mb-3">
@@ -52,15 +53,31 @@
                     <option value="revisao">Revisão</option>
                     <option value="exame">Exame</option>
                     <option value="outro">Outro</option>
+                    <option value="outro">Consulta de rotina</option>
+                    <option value="outro">Exame de sangue</option>
+                    <option value="outro">Retorno</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Agendar</button>
         </form>
-        <div id="popupAgendamento" class="popup">
-            <p>Agendamento realizado com sucesso!</p>
-            <button onclick="fecharPopupAgendamento()" class="btn btn-success">OK</button>
-        </div>
+
+        <h3 class="mt-5">Agendamentos Realizados</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="agendados">Paciente</th>
+                    <th>Médico</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Motivo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody id="agendamentosRealizados">
+            </tbody>
+        </table>
     </div>
     <script src="script.js"></script>
+    <script src="agendamentos.js"></script>
 </body>
 </html>
